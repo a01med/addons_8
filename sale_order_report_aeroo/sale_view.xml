@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+
+		<record id="view_order_ht" model="ir.ui.view">
+			<field name="name">sale.order.form</field>
+			<field name="model">sale.order</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<field name="amount_untaxed" position="after">
+					<field name="ht" invisible="1"/>
+					<field name="ht_wo_discount" invisible="1"/>
+				</field>
+			</field>
+		</record>
+	</data>
+</openerp>

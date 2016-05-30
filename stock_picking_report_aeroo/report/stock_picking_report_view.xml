@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="stock_picking_out_report_aeroo" model="ir.actions.report.xml">
+			<field name="name">Stock Picking Out Report Aeroo</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">stock.picking</field>
+			<field name="report_name">stock.picking.out.report.aeroo</field>
+			<field name="auto">TRUE</field>
+			<field name="report_type">aeroo</field>
+			<field name="report_rml">stock_picking_report_aeroo/report/stock_picking_out_report_aeroo.odt</field>
+			<field name="parser_state">default</field>
+			<field name="tml_source">file</field>
+			<field name="in_format">oo-odt</field>
+			<field name="out_format" eval="ref('report_aeroo.report_mimetypes_pdf_odt')"/>
+			<field name="styles_mode">global</field>
+			<field name="stylesheet_id"></field>
+		</record>
+		<record id="value_report_stock_picking_out_aeroo" model="ir.values">
+			<field name="name">stock.picking.out.report.aeroo</field>
+			<field name="key">action</field>
+			<field name="key2">client_print_multi</field>
+			<field name="model">stock.picking</field>
+			<field name="value" eval="'ir.actions.report.xml,'+str(ref('stock_picking_report_aeroo.stock_picking_out_report_aeroo'))"/>
+		</record>
+        <!--
+        <record id="stock_picking_in_report_aeroo" model="ir.actions.report.xml">
+            <field name="name">Stock Picking In Report Aeroo</field>
+            <field name="type">ir.actions.report.xml</field>
+            <field name="model">stock.picking.in</field>
+            <field name="report_name">stock.picking.in.report.aeroo</field>
+            <field name="auto">TRUE</field>
+            <field name="report_type">aeroo</field>
+            <field name="report_rml">stock_picking_report_aeroo/report/stock_picking_in_report_aeroo.odt</field>
+            <field name="parser_state">default</field>
+            <field name="tml_source">file</field>
+            <field name="in_format">oo-odt</field>
+            <field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_pdf_odt')"/>
+            <field name="styles_mode">global</field>
+            <field name="stylesheet_id"></field>
+        </record>
+        <record id="value_report_stock_picking_in_aeroo" model="ir.values">
+            <field name="name">stock.picking.in.report.aeroo</field>
+            <field name="key">action</field>
+            <field name="key2">client_print_multi</field>
+            <field name="model">stock.picking.in</field>
+            <field name="value" eval="'ir.actions.report.xml,'+str(ref('stock_picking_report_aeroo.stock_picking_in_report_aeroo'))"/>
+        </record>
+        -->
+	</data>
+</openerp>

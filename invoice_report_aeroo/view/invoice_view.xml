@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+		<record id="invoice_form_ht" model="ir.ui.view">
+			<field name="name">account.invoice.form</field>
+			<field name="model">account.invoice</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.invoice_form" />
+			<field name="arch" type="xml">
+				<field name="amount_tax" position="after">
+					<field name="ht" invisible="1"/>
+					<field name="ht_wo_discount" invisible="1"/>
+				</field>
+			</field>
+		</record>
+	</data>
+</openerp>
